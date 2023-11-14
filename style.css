@@ -2,3 +2,16 @@
     height: 250px;
     width: 250px;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputCont{
+    display: flex;
+}
+
+.text{
+    text-align: center;
+}
