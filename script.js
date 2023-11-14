@@ -4,9 +4,9 @@ const redInput = document.querySelector(".red");
 const greenInput = document.querySelector(".green");
 const blueInput = document.querySelector(".blue");
 
-const redText = document.getElementById("red");
-const greenText = document.getElementById("green");
-const blueText = document.getElementById("blue");
+const redResult = document.getElementById("redResult");
+const greenResult = document.getElementById("greenResult");
+const blueResult = document.getElementById("blueResult");
 
 
 function playGame(){
@@ -15,13 +15,13 @@ function playGame(){
     const blue = Math.floor(Math.random() * 257);
     color.style.backgroundColor = `rgb(${red}, ${green},${blue})`; 
     redInput.addEventListener('keyup', function(e){
-        redText.textContent = checkValue(e, redInput.value, red);
+        redResult.textContent = checkValue(e, redInput.value, red);
     });    
     greenInput.addEventListener('keyup', function(e){
-        greenText.textContent = checkValue(e, greenInput.value, green);
+        greenResult.textContent = checkValue(e, greenInput.value, green);
     });
     blueInput.addEventListener('keyup', function(e){
-        blueText.textContent = checkValue(e, blueInput.value,blue);
+        blueResult.textContent = checkValue(e, blueInput.value,blue);
     });
     
 
@@ -33,14 +33,14 @@ function playGame(){
 
   function checkValue(e, value, actualColor){
     if (e.keyCode === 13) {
-        if(value == actualColor){
-            return "That's correct!";
+        if(value >= actualColor - 5 && value <= actualColor + 5){
+            return "Correct";
         }
         if(value > actualColor){
-            return "The actual value is lower";
+            return "Go lower";
         }
         if(value < actualColor){
-            return "The actual value is higher";
+            return "Go higher";
         }
     }
   }

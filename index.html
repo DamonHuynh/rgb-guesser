@@ -8,22 +8,29 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-    <div id = "color"></div>
-
-    <div class="inputCont">
-        <div class="inputText">
-            <p class="text" id="red">red</p>
-            <input class = "red" type="number">
-        </div>
-        <div class="inputText">
-            <p class="text" id="green">green</p>
-            <input class = "green" type="number">
+    <header class="header">
+        RGB Color Guesser
+    </header>
+    <div class = cont>
+        <div id = "color"></div>
+        <div class="inputCont">
+            <div class="inputText">
+                <p class="text" id="red">Red</p>
+                <input class = "red" type="number">
+                <div class ="result" id="redResult">---</div>
+            </div>
+            <div class="inputText">
+                <p class="text" id="green">Green</p>
+                <input class = "green" type="number">
+                <div class ="result" id="greenResult">---</div>
+            </div> 
+            <div class="inputText">
+                <p class="text" id="blue"> Blue</p>
+                <input class = "blue" type="number">
+                <div class ="result" id="blueResult">---</div>
+            </div>
         </div> 
-        <div class="inputText">
-            <p class="text" id="blue"> blue</p>
-            <input class = "blue" type="number">
-        </div>
-    </div> 
+    </div>  
 
 </body>
 </html>

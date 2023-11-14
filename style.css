@@ -1,17 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Kdam+Thmor+Pro&family=Playpen+Sans:wght@700&family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,700;1,100;1,300&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+    border:0px
+}
+
+input{
+    padding: 10px;
+}
 #color{
     height: 250px;
     width: 250px;
+    border-radius: 500px;
+    align-self: center;
 }
 
-body{
+.cont{
+    height: 100vh;
+    padding: 0px;
     display: flex;
     flex-direction: column;
+    gap:100px;
+    padding: 50px;
+    background-color: #F5F5F4;
+    
 }
 
 .inputCont{
     display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+    align-self: center;
 }
 
-.text{
+.text, .result{
     text-align: center;
+    font-family: "Kdam Thmor Pro";
+}
+
+
+
+.header{
+    text-align: center;
+    background-color: #B8E1FF;
+    height: 100px;
+    font-size: 75px;
+    padding: 20px;
+    font-family: "Kdam Thmor Pro";
 }
