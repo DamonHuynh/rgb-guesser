@@ -20,7 +20,7 @@ input{
     padding: 0px;
     display: flex;
     flex-direction: column;
-    gap:100px;
+    gap:80px;
     padding: 50px;
     background-color: #F5F5F4;
     
@@ -38,6 +38,9 @@ input{
     font-family: "Kdam Thmor Pro";
 }
 
+.result{
+    height: 20px;
+}
 
 
 .header{
@@ -47,4 +50,15 @@ input{
     font-size: 75px;
     padding: 20px;
     font-family: "Kdam Thmor Pro";
+}
+
+button{
+    margin-top: -15px;
+    padding: 10px;
+    border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    font-family: "Kdam Thmor Pro";
+    color: white;
 }

@@ -8,11 +8,13 @@ const redResult = document.getElementById("redResult");
 const greenResult = document.getElementById("greenResult");
 const blueResult = document.getElementById("blueResult");
 
+const restart = document.getElementById("restart");
+
 
 function playGame(){
-    const red = Math.floor(Math.random() * 257);
-    const green = Math.floor(Math.random() * 257);
-    const blue = Math.floor(Math.random() * 257);
+    const red = randomValue();
+    const green = randomValue();
+    const blue = randomValue();
     color.style.backgroundColor = `rgb(${red}, ${green},${blue})`; 
     redInput.addEventListener('keyup', function(e){
         redResult.textContent = checkValue(e, redInput.value, red);
@@ -24,14 +26,12 @@ function playGame(){
         blueResult.textContent = checkValue(e, blueInput.value,blue);
     });
     
-
+}
+function randomValue (){
+    return Math.floor(Math.random() * 257);
 }
 
-
-
-
-
-  function checkValue(e, value, actualColor){
+function checkValue(e, value, actualColor){
     if (e.keyCode === 13) {
         if(value >= actualColor - 5 && value <= actualColor + 5){
             return "Correct";
@@ -44,5 +44,15 @@ function playGame(){
         }
     }
   }
+  function reset(input, resultText){
+    input.value = "";
+    resultText.textContent ="";
+  }
 
+  restart.addEventListener("click",() =>{
+    reset(redInput, redResult);
+    reset(greenInput, greenResult);
+    reset(blueInput, blueResult);
+    playGame();
+  });
   playGame();
